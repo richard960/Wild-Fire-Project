@@ -1,0 +1,17 @@
+#predict {
+  display: flex;
+  flex-direction: column;
+  width: 10em;
+  padding: 1em;
+  color: black;
+  font-size: 2em;
+  border: 2px solid black;
+  background-color: rgb(199, 237, 237);
+}
+
+#map {
+  position: absolute;
+  z-index: -1;
+  height: 100vh;
+  width: 100vw;
+}
