@@ -1,15 +1,22 @@
 import './App.css';
 import LandingPage from './landingPage.jsx'
-import map from './mapus.jpeg'
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
+import Map from './map.jsx'
 function App() {
   return (
     <div className="App">
-      <LandingPage/>
-        {/* <img id='map' src={map}></img>
-      <div id='predict'>
-        <label for='prediction'>Select A Date For Prediction</label>
-        <input type='date' id='prediction'></input>
-      </div> */}
+      <Router>
+        <Routes>
+          <Route path='/' element={<LandingPage/>}/>
+          <Route path='/map' element={<Map/>}/>
+        </Routes>
+      </Router>
+
+
     </div>
   );
 }
