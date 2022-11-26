@@ -10,13 +10,22 @@
 
 #title-container {
   position: relative;
-  bottom: 15vh;
+  bottom: 17vh;
+  font-family: system-ui;
+  font-size: 29px;
+  left: 30px;
+  top: -140px;
 }
 
 #start-btn {
   border: none;
   background: none;
   cursor: pointer;
+  position: relative;
+  top:170px;
+  left:-1px;
+  font-family: system-ui;
+  font-size: 25px;
 }
 
 
@@ -27,8 +36,8 @@
         height: 4px;
         position: absolute;
         left: -491px;
-        right: 0;
-        top: calc(50% - 140px);
+        right: 100px;
+        top: calc(50% - 100px);
         transform: translateY(-50%);
         margin: auto;
 }

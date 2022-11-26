@@ -5,7 +5,7 @@ const LandingPage = () => {
   const navigate = useNavigate()
   return(<div id='background'>
     <div id='title-container'>
-      <h1>Location-Based <br></br> Wildfire Prediction</h1>
+      <h1>Location-Based Wildfire Prediction</h1>
       
     </div>
     <div id='fire'></div>
