@@ -1,10 +1,11 @@
 #predict {
+  position: absolute;
   display: flex;
   flex-direction: column;
-  width: 10em;
+  width: max-content;
   padding: 1em;
-  color: black;
-  font-size: 2em;
+  /* color: black;
+  font-size: 2em; */
   border: 2px solid black;
   background-color: rgb(199, 237, 237);
 }

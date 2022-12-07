@@ -1,4 +1,27 @@
 #map {
   width: 100%;
   height: 100vh;
+  overflow: hidden;
+}
+
+label {
+  font-family: 'Teko', sans-serif;
+  font-size: 1.3em;
+}
+
+#map-container {
+  position: relative;
+}
+
+#sideMenu {
+  position: absolute;
+  right: -100%;
+  transition: 500ms ease-in;
+  background-color: white;
+  height: 100vh;
+}
+
+#sideMenu.slideIn {
+  right: 0;
+  transition: 500ms;
 }
