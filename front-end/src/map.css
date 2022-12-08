@@ -17,11 +17,32 @@ label {
   position: absolute;
   right: -100%;
   transition: 500ms ease-in;
-  background-color: white;
+  background-color: rgb(199, 237, 237);
   height: 100vh;
 }
 
 #sideMenu.slideIn {
   right: 0;
   transition: 500ms;
+}
+
+#infoContainer {
+  min-width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Teko', sans-serif;
+  font-size: 1.5em;
+}
+
+#closeContainer {
+  text-align: end;
+  padding-right: 10px;
+}
+
+#close {
+  display: block;
+  font-size: 20px;
+  cursor: pointer;
 }
