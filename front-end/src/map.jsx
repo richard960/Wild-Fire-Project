@@ -83,6 +83,9 @@ const Map = () => {
         </div>
         <div id='infoContainer'>
           <div>
+            City = {obj.city}
+          </div>
+          <div>
             Wildfire Probability = {obj.probability} %
           </div>
           <div>
