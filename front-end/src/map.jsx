@@ -6,9 +6,9 @@ import { RotatingLines } from 'react-loader-spinner';
 
 
 
-const exampleData = [{lat:46.680672,	lng:-68.023521}, {lat:37.569199,	lng: -84.299782}, {lat:41.483845,	lng:-87.063965}, {lat: 30.487400,	lng: -95.987228}, {lat: 33.040619, lng:-83.643074}, {lat:40.349457, lng: -88.986137}, {lat:38.526600, lng:-96.726486}, {lat:36.116203, lng:-119.681564},
-{lat:44.572021, lng:-122.070938}, {lat:31.054487, lng:-97.563461}, {lat:40.150032, lng:-111.862434},
-{lat:40.388783, lng:-82.764915}]
+const exampleData = [{lat:40.6486955, lng: -121.5920971}, {lat:40.2822730, lng:-123.3334177}, {lat:34.0362711, lng:-116.8057220}, {lat:33.6261821, lng:-116.7585828}, {lat: 38.2965633, lng:-120.3256975}, {lat:39.1585591, lng:-123.2767054}, {lat:40.3200964, lng:-124.0857888}, {lat:39.6159492,lng: -120.9982728},
+{lat:36.0229687, lng:-120.8655202
+}]
 
 const Map = () => {
   const center = useMemo(() => ({lat: 44, lng: -100}), []);
@@ -56,16 +56,19 @@ const Map = () => {
     }).then(async (res) => {
 
       let {id} = await res.json().then((result) => {
+        console.log(result)
         return result
       })
       fetch(`http://209.141.47.144:8080/predictions/${id}`).then((results) => {
+
         results.json().then((data) => {
-          let copy = exampleData.slice();
+          console.log(data)
+          // let copy = exampleData.slice();
           setData(data.map((location) => {
-            let random = Math.floor(Math.random() * copy.length);
-            let {lat, lng} = copy[random];
-            copy.splice(random, 1);
-            return {...location, lat:lat, lng: lng}
+            // let random = Math.floor(Math.random() * copy.length);
+            // let {lat, lng} = copy[random];
+            // copy.splice(random, 1);
+            return {...location, lat: location.latitude, lng: location.longitude}
           }))
         })
       })
@@ -80,14 +83,14 @@ const Map = () => {
         </div>
         <div id='infoContainer'>
           <div>
-            Temperature = {obj.temperature}
+            Wildfire Probability = {obj.probability} %
           </div>
           <div>
-            Humidity = {obj.humidity}
+           Area of damage = {obj.areadamaged} sq ft
           </div>
-          <div>
+          {/* <div>
             Rainfall = {obj.rainfall}
-          </div>
+          </div> */}
         </div>
       </div>
      <div id='predict'>
